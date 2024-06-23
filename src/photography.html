@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Photography</title>
+    <link rel="stylesheet" href="styles_photography.css">
+</head>
+
+<body class="bodyC">
+<header class="class1">
+    <div class="hero">
+        <div class="header">
+            <nav class="nav">
+                <h5 class="option"><a href="index.html">About</a></h5>
+                <h5 class="option"><a href="hobby.html">Hobby</a></h5>
+                <h5 class="option"><a href="nba.html">NBA</a></h5>
+                <h5 class="option selected">Photography</h5>
+            </nav>
+        </div>
+
+        <div>
+            <h1 style="color:black">Photography</h1>
+        </div>
+    </div>
+</header>
+
+<div class="class1 main container">
+    <div class="class1 main">
+        <div class="intro">
+            Photography is my passion—an art form that allows me to capture moments in time and transform them into lasting
+            memories. Through my lens, I explore the world, seeking beauty in everyday scenes and extraordinary moments alike.
+
+            Every click of the shutter is an opportunity to freeze a fleeting expression, a play of light and shadow, or a
+            glimpse of nature's wonders. Whether it's a bustling cityscape or the quiet solitude of nature, each photograph
+            tells a unique story and evokes emotions that transcend words.
+        </div>
+
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <img src="img1.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="img2.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="img3.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="img4.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="img5.jpg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+</body>
+
+</html>
